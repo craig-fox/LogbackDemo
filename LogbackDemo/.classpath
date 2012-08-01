@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="main/java/|main/resources/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="lib/groovy-1.8.6.jar"/>
+	<classpathentry kind="lib" path="lib/logback-classic-1.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/logback-core-1.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="lib/asm-3.2.jar"/>
+	<classpathentry kind="lib" path="lib/asm-analysis-3.2.jar"/>
+	<classpathentry kind="lib" path="lib/asm-commons-3.2.jar"/>
+	<classpathentry kind="lib" path="lib/asm-tree-3.2.jar"/>
+	<classpathentry kind="lib" path="lib/asm-util-3.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
