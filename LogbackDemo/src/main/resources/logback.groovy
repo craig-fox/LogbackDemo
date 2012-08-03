@@ -1,15 +1,20 @@
 import ch.qos.logback.classic.encoder.PatternLayoutEncoder 
 import ch.qos.logback.core.FileAppender
 import ch.qos.logback.core.ConsoleAppender
+import ch.qos.logback.classic.turbo.MDCFilter
 
 import static ch.qos.logback.classic.Level.DEBUG
+import static ch.qos.logback.classic.Level.INFO
 import static ch.qos.logback.classic.Level.WARN
 
-def bySecond = timestamp("yyyyMMdd'T'HHmmss")
 
 def USER_HOME = System.getProperty("user.home");
-println "USER_HOME=${USER_HOME}"
+def loginFilter = new MDCFilter()
 
+println "USER_HOME=${USER_HOME}"
+println "Host Name = ${hostname}"
+
+scan("10 seconds")
 
 appender("FILE", FileAppender) {
   println "Setting [file] property to [${USER_HOME}/myApp.log]"
@@ -20,10 +25,9 @@ appender("FILE", FileAppender) {
 }
 
 
-
 appender("CONSOLE", ConsoleAppender) {
   encoder(PatternLayoutEncoder) {
-    pattern = "%level %logger - %msg%n"
+    pattern = "%d{HH:mm:ss.SSS} %level %logger - %msg%n"
   }
 }
 
